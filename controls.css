@@ -1,0 +1,87 @@
+/* RADIO BUTTONS */
+
+.radio {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	/* margin: 20px 0 0 7px; */
+}
+.radio + label {
+	position: relative;
+	padding: 0px 10px 0 25px;
+	top: -10px;
+    cursor: pointer;
+}
+.radio + label:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 16px;
+    border-radius: 50%;
+    background-color: rgb(177, 177, 177);
+}
+.radio + label:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+	opacity: 0;
+    transition: .2s;
+    border: 4px solid rgb(110, 198, 228);
+}
+.radio:checked + label:after {
+	opacity: 1;
+}
+
+
+
+
+/* CHECK BOXES */
+
+.checkbox {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	/* margin: 10px 0 0 20px; */
+}
+.checkbox + label {
+	position: relative;
+	padding: 0 10px 0 40px;
+	cursor: pointer;
+}
+.checkbox + label:before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 0;
+	width: 30px;
+	height: 18px;
+	border-radius: 9px;
+	background: #CDD1DA;
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+	transition: .2s;
+}
+.checkbox + label:after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 2px;
+	width: 14px;
+	height: 14px;
+	border-radius: 10px;
+	background: #FFF;
+	box-shadow: 0 1px 3px rgba(0,0,0,.3);
+	transition: .2s;
+}
+.checkbox:checked + label:before {
+	background: rgb(110, 198, 228);
+}
+.checkbox:checked + label:after {
+	left: 14px;
+}
